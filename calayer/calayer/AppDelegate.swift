@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let splitViewController = UISplitViewController()
         
         splitViewController.viewControllers = [masterNavCtl!, detailNavCtl!]
-        splitViewController.preferredDisplayMode = .primaryHidden
+        splitViewController.preferredDisplayMode = .automatic
         
         self.window = UIWindow()
         self.window?.rootViewController = splitViewController

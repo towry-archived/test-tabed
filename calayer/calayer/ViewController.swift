@@ -16,7 +16,6 @@ let names = ["layer demo1"]
 
 class ViewController: UITableViewController {
     
-    var bCollapsed: Bool = true
     var detailViewCtl: UIViewController?
     
     override func viewDidLoad() {
@@ -26,7 +25,7 @@ class ViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: kCellId)
         
         splitViewController?.delegate = self
-        splitViewController?.preferredDisplayMode = .automatic
+//        splitViewController?.preferredDisplayMode = .automatic
         
         title = "Master"
         navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
@@ -67,13 +66,10 @@ class ViewController: UITableViewController {
     
     // MARK: - tableViewDelegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if UIScreen.main.bounds.width > UIScreen.main.bounds.height {
-//            print("%d, %d", UIScreen.main.bounds.width, UIScreen.main.bounds.height)
-//            self.showDetailViewController(self.detailViewCtl!, sender: nil)
-//        } else {
-            print("%d, %d", UIScreen.main.bounds.width, UIScreen.main.bounds.height)
-            self.show(self.detailViewCtl!, sender: nil)
-//        }
+        
+//        let vc = SecondDetailViewController()
+        let vc = self.detailViewCtl!
+        self.showDetailViewController(vc, sender: nil)
     }
 }
 

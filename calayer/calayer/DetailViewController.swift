@@ -27,6 +27,6 @@ class DetailViewController: UIViewController {
 extension DetailViewController: UISplitViewControllerDelegate {
     
     func splitViewController(_ splitViewController: UISplitViewController, showDetail vc: UIViewController, sender: Any?) -> Bool {
-        return true
+        return false
     }
 }
