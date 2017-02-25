@@ -23,6 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         masterNavCtl?.addChildViewController(ViewController())
         detailNavCtl?.addChildViewController(DetailViewController())
         
+        // must set this after addChildViewController
+        masterNavCtl?.navigationBar.isTranslucent = false
+        detailNavCtl?.navigationBar.isTranslucent = false
+
+        
         let splitViewController = UISplitViewController()
         
         splitViewController.viewControllers = [masterNavCtl!, detailNavCtl!]

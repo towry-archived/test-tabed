@@ -20,14 +20,15 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("master loaded")
         
         tableView.separatorStyle = .singleLine
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: kCellId)
         
         splitViewController?.delegate = self
-//        splitViewController?.preferredDisplayMode = .automatic
         
         title = "Master"
+//        navigationController?.navigationBar.isTranslucent = false
         navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
         navigationItem.leftItemsSupplementBackButton = true
         
@@ -40,7 +41,6 @@ class ViewController: UITableViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,10 +66,9 @@ class ViewController: UITableViewController {
     
     // MARK: - tableViewDelegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-//        let vc = SecondDetailViewController()
-        let vc = self.detailViewCtl!
-        self.showDetailViewController(vc, sender: nil)
+//        self.showDetailViewController(self.detailViewCtl!, sender: nil)
+        // or
+        self.navigationController?.pushViewController(self.detailViewCtl!, animated: true)
     }
 }
 
@@ -80,10 +79,5 @@ extension ViewController: UISplitViewControllerDelegate {
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
         return true
     }
-    // Restore navigation controller for iPhone 6 plus is rotated to landscape when the detail view controller is pushed in portrait.
-    func splitViewController(splitViewController: UISplitViewController, separateSecondaryViewControllerFromPrimaryViewController primaryViewController: UIViewController!) -> UIViewController? {
-        primaryViewController.separateSecondaryViewController(for: splitViewController)
-        let navController = UINavigationController(rootViewController: detailViewCtl!)
-        return navController
-    }
+
 }

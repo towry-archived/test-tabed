@@ -13,6 +13,8 @@
 		8362E88D1E5FFF8C00575094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8362E88B1E5FFF8C00575094 /* LaunchScreen.storyboard */; };
 		8362E8951E6015B200575094 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8362E8941E6015B200575094 /* DetailViewController.swift */; };
 		83B837C11E6086D1002E8D12 /* SecondDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B837C01E6086D1002E8D12 /* SecondDetailViewController.swift */; };
+		83B837C41E613856002E8D12 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B837C31E613856002E8D12 /* QuartzCore.framework */; };
+		83B837C61E613DC9002E8D12 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B837C51E613DC9002E8D12 /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		8362E88E1E5FFF8C00575094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8362E8941E6015B200575094 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		83B837C01E6086D1002E8D12 /* SecondDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondDetailViewController.swift; sourceTree = "<group>"; };
+		83B837C31E613856002E8D12 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		83B837C51E613DC9002E8D12 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B837C41E613856002E8D12 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,7 @@
 			children = (
 				8362E8811E5FFF8C00575094 /* calayer */,
 				8362E8801E5FFF8C00575094 /* Products */,
+				83B837C21E613856002E8D12 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +69,17 @@
 				8362E88E1E5FFF8C00575094 /* Info.plist */,
 				8362E8941E6015B200575094 /* DetailViewController.swift */,
 				83B837C01E6086D1002E8D12 /* SecondDetailViewController.swift */,
+				83B837C51E613DC9002E8D12 /* Media.xcassets */,
 			);
 			path = calayer;
+			sourceTree = "<group>";
+		};
+		83B837C21E613856002E8D12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83B837C31E613856002E8D12 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8362E88D1E5FFF8C00575094 /* LaunchScreen.storyboard in Resources */,
+				83B837C61E613DC9002E8D12 /* Media.xcassets in Resources */,
 				8362E88A1E5FFF8C00575094 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
