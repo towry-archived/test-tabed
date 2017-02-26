@@ -16,6 +16,8 @@ let names = ["layer demo1"]
 
 class ViewController: UITableViewController {
     
+    var detailCtl: UIViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("master loaded")
@@ -30,6 +32,11 @@ class ViewController: UITableViewController {
 //        navigationController?.navigationBar.isTranslucent = false
         navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
         navigationItem.leftItemsSupplementBackButton = true
+        
+        if let split = self.splitViewController {
+            let ctls = split.viewControllers
+            self.detailCtl = (ctls[ctls.count - 1] as? UINavigationController)?.topViewController as? DetailViewController
+        }
     }
     
     
@@ -61,12 +68,13 @@ class ViewController: UITableViewController {
     // MARK: - tableViewDelegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("showDetailViewController")
-        let vc = DetailViewController()
-        vc.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
-        vc.navigationItem.leftItemsSupplementBackButton = true
-        let nv = UINavigationController(rootViewController: vc)
-        nv.navigationBar.isTranslucent = false
-        self.showDetailViewController(nv, sender: nil)
+//        let vc = DetailViewController()
+//        vc.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
+//        vc.navigationItem.leftItemsSupplementBackButton = true
+//        let nv = UINavigationController(rootViewController: vc)
+//        nv.navigationBar.isTranslucent = false
+        self.detailCtl?.navigationController?.navigationBar.isTranslucent = false
+        self.showDetailViewController((self.detailCtl?.navigationController)!, sender: nil)
     }
 }
 
