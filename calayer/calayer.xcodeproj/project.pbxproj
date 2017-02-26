@@ -15,9 +15,11 @@
 		83B837C11E6086D1002E8D12 /* SecondDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B837C01E6086D1002E8D12 /* SecondDetailViewController.swift */; };
 		83B837C41E613856002E8D12 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B837C31E613856002E8D12 /* QuartzCore.framework */; };
 		83B837C61E613DC9002E8D12 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B837C51E613DC9002E8D12 /* Media.xcassets */; };
+		C1C28D79219335C17A18531B /* libPods-calayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9E84E5358E3685AEBF77BB /* libPods-calayer.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7292EA67E38B8626C3E77C01 /* Pods-calayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-calayer/Pods-calayer.release.xcconfig"; sourceTree = "<group>"; };
 		8362E87F1E5FFF8C00575094 /* calayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8362E8821E5FFF8C00575094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8362E8841E5FFF8C00575094 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		83B837C01E6086D1002E8D12 /* SecondDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondDetailViewController.swift; sourceTree = "<group>"; };
 		83B837C31E613856002E8D12 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		83B837C51E613DC9002E8D12 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		C2DA94352058CD4C277A8089 /* Pods-calayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-calayer/Pods-calayer.debug.xcconfig"; sourceTree = "<group>"; };
+		DD9E84E5358E3685AEBF77BB /* libPods-calayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-calayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B837C41E613856002E8D12 /* QuartzCore.framework in Frameworks */,
+				C1C28D79219335C17A18531B /* libPods-calayer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +53,7 @@
 				8362E8811E5FFF8C00575094 /* calayer */,
 				8362E8801E5FFF8C00575094 /* Products */,
 				83B837C21E613856002E8D12 /* Frameworks */,
+				E645CB51A94D272F1776ED2E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,8 +84,18 @@
 			isa = PBXGroup;
 			children = (
 				83B837C31E613856002E8D12 /* QuartzCore.framework */,
+				DD9E84E5358E3685AEBF77BB /* libPods-calayer.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E645CB51A94D272F1776ED2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2DA94352058CD4C277A8089 /* Pods-calayer.debug.xcconfig */,
+				7292EA67E38B8626C3E77C01 /* Pods-calayer.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,9 +105,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8362E8911E5FFF8C00575094 /* Build configuration list for PBXNativeTarget "calayer" */;
 			buildPhases = (
+				A1A583550E48A5FBF9B5B657 /* [CP] Check Pods Manifest.lock */,
 				8362E87B1E5FFF8C00575094 /* Sources */,
 				8362E87C1E5FFF8C00575094 /* Frameworks */,
 				8362E87D1E5FFF8C00575094 /* Resources */,
+				1FCB9B2798F6666B7EA5CB8A /* [CP] Embed Pods Frameworks */,
+				BE94217A48D5F1E58F8ED40D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,6 +168,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FCB9B2798F6666B7EA5CB8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-calayer/Pods-calayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1A583550E48A5FBF9B5B657 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BE94217A48D5F1E58F8ED40D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-calayer/Pods-calayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8362E87B1E5FFF8C00575094 /* Sources */ = {
@@ -271,8 +338,10 @@
 		};
 		8362E8921E5FFF8C00575094 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2DA94352058CD4C277A8089 /* Pods-calayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5S95K97BRD;
 				INFOPLIST_FILE = calayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -284,8 +353,10 @@
 		};
 		8362E8931E5FFF8C00575094 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7292EA67E38B8626C3E77C01 /* Pods-calayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5S95K97BRD;
 				INFOPLIST_FILE = calayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

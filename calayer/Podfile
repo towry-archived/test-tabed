@@ -1,0 +1,3 @@
+target 'calayer' do
+	pod 'Reveal-SDK', :configurations => ['Debug']
+end

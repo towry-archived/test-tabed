@@ -13,6 +13,9 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("detail loaded")
+        
+        navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+        navigationItem.leftItemsSupplementBackButton = true
 
         title = "CALayer"
         view.backgroundColor = UIColor.white
@@ -23,6 +26,7 @@ class DetailViewController: UIViewController {
         
         let img = UIImage(named: "0.jpeg")
         blueLayer.contents = img?.cgImage
+        blueLayer.contentsGravity = kCAGravityCenter
         
         self.view.layer.addSublayer(blueLayer)
     }
