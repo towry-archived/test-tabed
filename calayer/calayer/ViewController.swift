@@ -12,9 +12,11 @@ let kScreenSize = UIScreen.main.bounds
 let kCellId = "cellId"
 
 // 
-let names = ["layer demo1"]
+let names = ["layer demo1", "mask layer"]
 
 class ViewController: UITableViewController {
+    
+    var detailViewChoosed: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +29,9 @@ class ViewController: UITableViewController {
         splitViewController?.preferredDisplayMode = .automatic
         
         title = "Master"
-//        navigationController?.navigationBar.isTranslucent = false
         navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
         navigationItem.leftItemsSupplementBackButton = true
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -61,12 +61,22 @@ class ViewController: UITableViewController {
     // MARK: - tableViewDelegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("showDetailViewController")
-        let vc = DetailViewController()
-        vc.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
-        vc.navigationItem.leftItemsSupplementBackButton = true
-        let nv = UINavigationController(rootViewController: vc)
-        nv.navigationBar.isTranslucent = false
-        self.showDetailViewController(nv, sender: nil)
+        var vc: UIViewController? = nil
+        if indexPath.row == 0 {
+            vc = DetailViewController()
+        } else if indexPath.row == 1 {
+            vc = MaskLayerViewController()
+        }
+        
+        if vc != nil {
+            vc?.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
+            vc?.navigationItem.leftItemsSupplementBackButton = true
+            let nv = UINavigationController(rootViewController: vc!)
+            nv.navigationBar.isTranslucent = false
+            self.showDetailViewController(nv, sender: nil)
+            self.detailViewChoosed = true
+        }
+
     }
 }
 
@@ -75,7 +85,7 @@ extension ViewController: UISplitViewControllerDelegate {
     
     // MARK: - split view delegate
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
-        return true
+        return !self.detailViewChoosed
     }
 
 }
