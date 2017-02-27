@@ -16,7 +16,8 @@ let names = [
     "layer demo1",
     "mask layer",
     "transform layer",
-    "animation"
+    "animation",
+    "draw line"
 ]
 
 class ViewController: UITableViewController {
@@ -75,6 +76,8 @@ class ViewController: UITableViewController {
             vc = TransformViewController()
         } else if indexPath.row == 3 {
             vc = AnimationViewController()
+        } else if indexPath.row == 4 {
+            vc = DrawLineViewController()
         }
         
         if vc != nil {

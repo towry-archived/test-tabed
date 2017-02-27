@@ -16,6 +16,8 @@
 		83D947D41E632F9F00072D9C /* MaskLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D947D31E632F9F00072D9C /* MaskLayerViewController.swift */; };
 		83D947D61E64160D00072D9C /* TransformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D947D51E64160D00072D9C /* TransformViewController.swift */; };
 		83D947D81E64268C00072D9C /* AnimationLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D947D71E64268C00072D9C /* AnimationLayerViewController.swift */; };
+		83D947DA1E64369E00072D9C /* DrawLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D947D91E64369E00072D9C /* DrawLineViewController.swift */; };
+		83D947DC1E6436E900072D9C /* DrawLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D947DB1E6436E900072D9C /* DrawLineView.swift */; };
 		C1C28D79219335C17A18531B /* libPods-calayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9E84E5358E3685AEBF77BB /* libPods-calayer.a */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,8 @@
 		83D947D31E632F9F00072D9C /* MaskLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskLayerViewController.swift; sourceTree = "<group>"; };
 		83D947D51E64160D00072D9C /* TransformViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformViewController.swift; sourceTree = "<group>"; };
 		83D947D71E64268C00072D9C /* AnimationLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationLayerViewController.swift; sourceTree = "<group>"; };
+		83D947D91E64369E00072D9C /* DrawLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawLineViewController.swift; sourceTree = "<group>"; };
+		83D947DB1E6436E900072D9C /* DrawLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawLineView.swift; path = Views/DrawLineView.swift; sourceTree = "<group>"; };
 		C2DA94352058CD4C277A8089 /* Pods-calayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-calayer/Pods-calayer.debug.xcconfig"; sourceTree = "<group>"; };
 		DD9E84E5358E3685AEBF77BB /* libPods-calayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-calayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -70,7 +74,7 @@
 		8362E8811E5FFF8C00575094 /* calayer */ = {
 			isa = PBXGroup;
 			children = (
-				83D947D21E62F8D600072D9C /* View */,
+				83D947D21E62F8D600072D9C /* Views */,
 				8362E8821E5FFF8C00575094 /* AppDelegate.swift */,
 				8362E8841E5FFF8C00575094 /* ViewController.swift */,
 				8362E8891E5FFF8C00575094 /* Assets.xcassets */,
@@ -80,6 +84,7 @@
 				83D947D31E632F9F00072D9C /* MaskLayerViewController.swift */,
 				83D947D51E64160D00072D9C /* TransformViewController.swift */,
 				83D947D71E64268C00072D9C /* AnimationLayerViewController.swift */,
+				83D947D91E64369E00072D9C /* DrawLineViewController.swift */,
 			);
 			path = calayer;
 			sourceTree = "<group>";
@@ -93,11 +98,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		83D947D21E62F8D600072D9C /* View */ = {
+		83D947D21E62F8D600072D9C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				83D947DB1E6436E900072D9C /* DrawLineView.swift */,
 			);
-			name = View;
+			name = Views;
 			sourceTree = "<group>";
 		};
 		E645CB51A94D272F1776ED2E /* Pods */ = {
@@ -232,11 +238,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83D947DA1E64369E00072D9C /* DrawLineViewController.swift in Sources */,
 				83D947D61E64160D00072D9C /* TransformViewController.swift in Sources */,
 				8362E8951E6015B200575094 /* DetailViewController.swift in Sources */,
 				8362E8851E5FFF8C00575094 /* ViewController.swift in Sources */,
 				83D947D41E632F9F00072D9C /* MaskLayerViewController.swift in Sources */,
 				8362E8831E5FFF8C00575094 /* AppDelegate.swift in Sources */,
+				83D947DC1E6436E900072D9C /* DrawLineView.swift in Sources */,
 				83D947D81E64268C00072D9C /* AnimationLayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
