@@ -12,7 +12,12 @@ let kScreenSize = UIScreen.main.bounds
 let kCellId = "cellId"
 
 // 
-let names = ["layer demo1", "mask layer"]
+let names = [
+    "layer demo1",
+    "mask layer",
+    "transform layer",
+    "animation"
+]
 
 class ViewController: UITableViewController {
     
@@ -66,6 +71,10 @@ class ViewController: UITableViewController {
             vc = DetailViewController()
         } else if indexPath.row == 1 {
             vc = MaskLayerViewController()
+        } else if indexPath.row == 2 {
+            vc = TransformViewController()
+        } else if indexPath.row == 3 {
+            vc = AnimationViewController()
         }
         
         if vc != nil {

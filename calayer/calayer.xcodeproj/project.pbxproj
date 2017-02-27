@@ -14,6 +14,8 @@
 		8362E8951E6015B200575094 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8362E8941E6015B200575094 /* DetailViewController.swift */; };
 		83B837C41E613856002E8D12 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B837C31E613856002E8D12 /* QuartzCore.framework */; };
 		83D947D41E632F9F00072D9C /* MaskLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D947D31E632F9F00072D9C /* MaskLayerViewController.swift */; };
+		83D947D61E64160D00072D9C /* TransformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D947D51E64160D00072D9C /* TransformViewController.swift */; };
+		83D947D81E64268C00072D9C /* AnimationLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D947D71E64268C00072D9C /* AnimationLayerViewController.swift */; };
 		C1C28D79219335C17A18531B /* libPods-calayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9E84E5358E3685AEBF77BB /* libPods-calayer.a */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		8362E8941E6015B200575094 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		83B837C31E613856002E8D12 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		83D947D31E632F9F00072D9C /* MaskLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskLayerViewController.swift; sourceTree = "<group>"; };
+		83D947D51E64160D00072D9C /* TransformViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformViewController.swift; sourceTree = "<group>"; };
+		83D947D71E64268C00072D9C /* AnimationLayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationLayerViewController.swift; sourceTree = "<group>"; };
 		C2DA94352058CD4C277A8089 /* Pods-calayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-calayer/Pods-calayer.debug.xcconfig"; sourceTree = "<group>"; };
 		DD9E84E5358E3685AEBF77BB /* libPods-calayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-calayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,6 +78,8 @@
 				8362E88E1E5FFF8C00575094 /* Info.plist */,
 				8362E8941E6015B200575094 /* DetailViewController.swift */,
 				83D947D31E632F9F00072D9C /* MaskLayerViewController.swift */,
+				83D947D51E64160D00072D9C /* TransformViewController.swift */,
+				83D947D71E64268C00072D9C /* AnimationLayerViewController.swift */,
 			);
 			path = calayer;
 			sourceTree = "<group>";
@@ -226,10 +232,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83D947D61E64160D00072D9C /* TransformViewController.swift in Sources */,
 				8362E8951E6015B200575094 /* DetailViewController.swift in Sources */,
 				8362E8851E5FFF8C00575094 /* ViewController.swift in Sources */,
 				83D947D41E632F9F00072D9C /* MaskLayerViewController.swift in Sources */,
 				8362E8831E5FFF8C00575094 /* AppDelegate.swift in Sources */,
+				83D947D81E64268C00072D9C /* AnimationLayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

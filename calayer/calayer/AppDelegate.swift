@@ -34,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         splitViewController.preferredDisplayMode = .automatic
         
         self.window = UIWindow()
+        self.window?.backgroundColor = UIColor.white
         self.window?.rootViewController = splitViewController
         self.window?.makeKeyAndVisible()
 
