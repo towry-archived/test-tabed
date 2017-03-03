@@ -1,0 +1,3 @@
+target 'autolayout' do
+	pod 'Reveal-SDK', :configurations => ['Debug']
+end
